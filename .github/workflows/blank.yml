@@ -27,7 +27,7 @@ jobs:
         uses: johnwason/vcpkg-action@v7
         id: vcpkg
         with:
-          pkgs: qtgrpc qtcharts qtdeclarative qtbase qtgui
+          pkgs: qtgrpc qtcharts qtdeclarative qtbase qttools
           triplet: arm64-windows
           token: ${{ github.token }}
 
