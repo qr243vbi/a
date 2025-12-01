@@ -27,15 +27,15 @@ jobs:
         run: |
            New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
       - name: Test Long Paths
-        shell: cmd
+        shell: bash
         run: |
-           mkdir  bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-           cd     bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-           mkdir  qr243vbiqr243vbiqr243vbiqr243vbiqr243vbi
-           cd     qr243vbiqr243vbiqr243vbiqr243vbiqr243vbi
-           mkdir  llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
-           cd     llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
-           copy NUL aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+           mkdir  bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb    ;
+           cd     bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb    ;
+           mkdir  qr243vbiqr243vbiqr243vbiqr243vbiqr243vbi                                          ;
+           cd     qr243vbiqr243vbiqr243vbiqr243vbiqr243vbi                                          ;
+           mkdir  llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll    ;
+           cd     llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll    ;
+           touch aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.txt ;
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: vcpkg build
         uses: johnwason/vcpkg-action@v7
